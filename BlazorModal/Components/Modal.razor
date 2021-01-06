@@ -1,0 +1,52 @@
+﻿@inject ModalService ModalService
+@if (showModal)
+{
+<div class="modal-window @(DialogSize == enumDialogSize.FitScreen ? "fit-screen" : "")">    
+    <div class="modal-dialog @(DialogSize == enumDialogSize.Large ? "modal-lg" : "")">        
+        <div class="modal-content" style="background-color:@bgColor">
+            @if (displayCloseButton)
+            {
+                <ModalHeader>
+                    <button type="button" class="close" @onclick="Hide">&times;</button>
+                </ModalHeader>
+            }        
+            @ChildContent        
+        </div>
+    </div>
+</div>
+}
+@code
+{    
+    public bool showModal { get; set; }
+    public enum enumDialogSize { Normal, Large, FitScreen }
+    [Parameter]
+    public enumDialogSize DialogSize { get; set; } = enumDialogSize.Normal;
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter] public bool displayCloseButton { get; set; } = true;
+    [Parameter] public string bgColor { get; set; } = "white";
+    protected override void OnInitialized()
+    {
+        ModalService.OnShow += Show;
+        ModalService.OnClose +=Hide;
+    }
+
+    public void Show()
+    {
+        showModal = true;
+        StateHasChanged();
+    }
+
+    public void Hide()
+    {
+        showModal = false;
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        ModalService.OnShow -= Show;
+        ModalService.OnClose -=Hide;
+    }
+}
+
