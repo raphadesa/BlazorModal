@@ -46,7 +46,7 @@ In your _Host.cshtml or index.html:
 ```
 <link href="your-app-name.styles.css" rel="stylesheet" />
 ```
-In your _imports.razor:
+In your _Imports.razor:
 ```
 @using BlazorModal 
 ```
