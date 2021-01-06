@@ -39,9 +39,14 @@ Events: Show, Hide
 Nuget-package: https://www.nuget.org/packages/BlazorModal
 
 In startup.cs:
-`
+```
 services.AddScoped<ModalService>();
-`
-
-
-
+```
+In your _Host.cshtml or index.html:
+```
+<link href="your-app-name.styles.css" rel="stylesheet" />
+```
+In your _imports.razor:
+```
+@using BlazorModal 
+```
