@@ -1,0 +1,35 @@
+# BlazorModal
+
+Simple Javascript-free Blazor Modal
+
+Sample code:
+
+```
+<Modal @ref="modal" DialogSize="Modal.enumDialogSize.Large">
+    <ModalBody>
+        Hello!!! Welcome to Blazor!
+    </ModalBody>
+</Modal>
+
+<button class="btn btn-info" @onclick="openModal">Open Modal! </button>
+
+@code
+{
+    Modal modal;
+    void openModal()
+    {
+        modal.Show();
+    }
+}
+```
+
+
+Nuget-package: https://www.nuget.org/packages/BlazorModal
+
+In startup.cs:
+`
+services.AddScoped<ModalService>();
+`
+
+
+
