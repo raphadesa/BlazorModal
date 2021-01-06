@@ -22,7 +22,19 @@ Sample code:
     }
 }
 ```
+Parameters: 
 
+Dialog Size : Modal.enumDialogSize.Normal, Modal.enumDialogSize.Large, of Modal.enumDialogSize.FitScreen
+
+displayCloseButton : boolean
+
+bgColor: hex or string value
+```
+<ModalHeader>
+<ModalBody>
+<ModalFooter>
+ ```
+Events: Show, Hide
 
 Nuget-package: https://www.nuget.org/packages/BlazorModal
 
