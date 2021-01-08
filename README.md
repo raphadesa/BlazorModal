@@ -2,6 +2,8 @@
 
 Simple Javascript-free Blazor Modal
 
+Compatible with Bootstrap 3 and 4.
+
 Sample code:
 
 ```
