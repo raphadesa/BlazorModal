@@ -25,11 +25,7 @@
     [Parameter] public bool displayCloseButton { get; set; } = true;
     [Parameter] public string bgColor { get; set; } = "white";
 
-    public void Show()
-    {
-        showModal = true;
-        StateHasChanged();
-    }
+    public void Show() => showModal = true;    
 
     public void Hide() => showModal = false;
 }
