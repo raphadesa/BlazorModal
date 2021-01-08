@@ -1,7 +1,7 @@
 ﻿@inject ModalService ModalService
 @if (showModal)
 {
-<div class="modal-window @(DialogSize == enumDialogSize.FitScreen ? "fit-screen" : "")">    
+<div class="modal-window modal @(DialogSize == enumDialogSize.FitScreen ? "fit-screen" : "")">    
     <div class="modal-dialog @(DialogSize == enumDialogSize.Large ? "modal-lg" : "")">        
         <div class="modal-content" style="background-color:@bgColor">
             @if (displayCloseButton)

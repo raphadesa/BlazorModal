@@ -1,17 +1,7 @@
 ﻿.modal-window {
-    position: fixed;
     background-color: rgba(240, 240, 240, 0.75);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    visibility: visible;
-    opacity: 1;
-    pointer-events: none;
-    transition: all 0.3s;
+    display: block !important;
 }
-
 .fit-screen .modal-dialog {
     width: 99% !important;
     height: 99% !important;
