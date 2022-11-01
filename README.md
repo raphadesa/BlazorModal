@@ -48,3 +48,4 @@ In your _Imports.razor:
 ```
 @using BlazorModal 
 ```
+"This project is licensed under the terms of the MIT license."
